@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Генератор паролей</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Генератор паролей</h1>
+        
+        <div class="controls">
+            <div class="control-group">
+                <label>Длина пароля: <span id="lengthValue">16</span></label>
+                <input type="range" id="length" min="4" max="32" value="16">
+            </div>
+
+            <div class="checkbox-group">
+                <label class="checkbox-label">
+                    <input type="checkbox" id="uppercase" checked>
+                    Заглавные буквы (A-Z)
+                </label>
+                <label class="checkbox-label">
+                    <input type="checkbox" id="numbers" checked>
+                    Цифры (0-9)
+                </label>
+                <label class="checkbox-label">
+                    <input type="checkbox" id="symbols" checked>
+                    Спецсимволы (!@#$%^&*)
+                </label>
+            </div>
+        </div>
+
+        <div class="result" id="passwordResult">
+            Нажмите "Сгенерировать"
+        </div>
+
+        <div class="buttons">
+            <button id="generateBtn" class="btn btn-primary">Сгенерировать</button>
+            <button id="copyBtn" class="btn btn-success">Скопировать</button>
+        </div>
+
+        <div id="message" class="message"></div>
+
+        <div class="api-examples">
+            <h3>Тестирование API</h3>
+            
+            <div class="code-block">
+                GET /api/passwords?length=16&amp;uppercase=false
+            </div>
+            
+            <div class="code-block">
+                POST /api/passwords<br>
+                Content-Type: application/json<br>
+                { "length": 20, "symbols": false }
+            </div>
+
+            <div class="api-buttons">
+                <button id="testGetBtn" class="btn btn-secondary">Тест GET</button>
+                <button id="testPostBtn" class="btn btn-secondary">Тест POST</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/app.js"></script>
+</body>
+</html>
