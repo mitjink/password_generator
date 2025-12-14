@@ -8,3 +8,4 @@
 # Скриншоты
 1. ![Пример работы программы](screenshots/password1.png)
 2. ![Пример работы программы](screenshots/password2.png)
+3. ![Пример работы программы](screenshots/password3.png)
