@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', function() {
         try {
             const response1 = await fetch('/api/passwords?length=8&symbols=false');
             const data1 = await response1.json();
-            console.log('GET тест 1 (8 символов):', data1);
+            console.log('GET тест 1 (8 символов, без спецсимволов):', data1);
             
             const response2 = await fetch('/api/passwords?length=20');
             const data2 = await response2.json();
